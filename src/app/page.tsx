@@ -7,8 +7,6 @@ import Footer from "@/app/components/Footer";
 import Button from "@/app/components/Button";
 import { useRouter } from "next/navigation";
 
-type SectionKey = '"Personal Information"' | '"Skills"' | '"Work Experience"' | '"Education"' | '"Certifications"';
-
 
 function Home() {
   const [displayedCV, setDisplayedCV] = useState("");
@@ -86,7 +84,7 @@ function Home() {
             onClick={handleGenerateCV}
           />
           <Button
-            name="Protfolio"
+            name="Portfolio"
             disabled={typing}
             onClick={linkToPortfolio}
           />
