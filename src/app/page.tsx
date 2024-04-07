@@ -7,6 +7,9 @@ import Footer from "@/app/components/Footer";
 import Button from "@/app/components/Button";
 import { useRouter } from "next/navigation";
 
+type SectionKey = '"Personal Information"' | '"Skills"' | '"Work Experience"' | '"Education"' | '"Certifications"';
+
+
 function Home() {
   const [displayedCV, setDisplayedCV] = useState("");
   const [typing, setTyping] = useState(false);
@@ -36,10 +39,41 @@ function Home() {
     router.push("https://www.studiobromo.hu/portfolio");
   };
 
+
   const processCVTextForDisplay = (text: string): string => {
-    // Test with a simplified version to ensure the mechanism works
-    return text.replace(/("details":)/g, `<span class="highlighted">$1</span>`);
+    // Define a map of section identifiers to CSS classes
+    const sectionStyles: { [key: string]: string } = {
+      '"Personal Information"': 'personal-information',
+      '"Skills"': 'skills',
+      '"section"': 'section',
+      '"Work Experience"': 'section-work-experience',
+      '"Education"': 'education',
+      '"Certifications"': 'certifications',
+    };
+  
+    // Function to apply styles
+    const applyStyles = (match: string): string => {
+      // Directly return the span with class if key exists in sectionStyles
+      if (match in sectionStyles) {
+        const className = sectionStyles[match];
+        const key = match.replace(/"/g, '');
+        return `<span class="${className}">${key}</span>`;
+      }
+      // Fallback if the key does not exist
+      return match;
+    };
+  
+    // Replace each section with a styled span based on its name
+    for (const section in sectionStyles) {
+      if (Object.prototype.hasOwnProperty.call(sectionStyles, section)) {
+        const regex = new RegExp(section, 'g');
+        text = text.replace(regex, applyStyles);
+      }
+    }
+  
+    return text;
   };
+  
 
   return (
     <>

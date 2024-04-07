@@ -1,7 +1,7 @@
 import React from "react";
 
 const handleDownload = () => {
-  const path = "/path/to/your/CV.pdf";
+  const path = "NagyGYörgy_CV.pdf";
   window.location.href = path;
 };
 

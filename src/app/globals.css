@@ -32,7 +32,23 @@ body {
   }
 }
 
-.highlighted {
+.skills {
   color: #4ade80; /* Change color as needed */
   font-weight: bold;
+}
+
+.personal-information {
+  color: #4285F4; /* Blue */
+}
+.section-skills {
+  color: #EA4335; /* Red */
+}
+.section-work-experience {
+  color: #FBBC05; /* Yellow */
+}
+.education {
+  color: #34A853; /* Green */
+}
+.certifications {
+  color: #673AB7; /* Purple */
 }

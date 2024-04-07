@@ -1,3 +1,5 @@
+
+
 const CVData = [
   {
     section: "Personal Information",
@@ -7,11 +9,6 @@ const CVData = [
       Phone: "+36 30-544-0969",
       Email: "gyorgynagy1986@gmail.com",
     },
-  },
-  {
-    section: "Objective",
-    content:
-      "Motivated IT professional with 5+ years of experience in software development seeking a challenging position at a forward-thinking company where I can utilize my skills in software engineering to contribute to the company’s success and further develop my professional skills.",
   },
   {
     section: "Skills",
@@ -33,26 +30,32 @@ const CVData = [
   {
     section: "Work Experience",
     positions: [
-      {
-        Position: "",
-        Company: "ToP Designer Kft",
-        Duration: "2017 - Present",
-        Responsibilities: [
-          "Mentoring and supporting colleagues due to problems encountered during their work",
-          "Responding to website visitors' inquiries for marketing purposes",
-          "Creation of design elements for an online recruitment platform",
-        ],
-      },
+     
       {
         Position: "Freelancer fullstack developer ",
         Company: "sole proprietorship",
-        Duration: "2022 - Present",
-        Responsibilities: [
-          "Assisted in the development of software applications using Java and .NET frameworks.",
-          "Contributed to the maintenance and updating of existing applications, resulting in a 10% decrease in bugs.",
-          "Participated in regular team meetings and contributed ideas for system improvements.",
+        Duration: "2021 - Present",
+        Experience: [
+          "End-to-End web development projects",
+          "Client needs assessment and consultations",
+          "Close collaboration with UX/UI designers.",
+          "Custom development solutions",
+          "Comprehensive website optimization",
+          "Maintenance and support",
         ],
       },
+      {
+        Position: "Web and customer manager (system admin, team leader)",
+        Company: "ToP Designer Kft",
+        Duration: "2017 - Present",
+        Experience: [
+          "Outstanding customer management in Englis",
+          "Skilled in managing web environments for continuous availability and high user satisfaction",
+          "Familiarity with various web technologies and platforms or efficient troubleshooting",
+          "Proven track record of overseeing and maintaining web infrastructure to meet organizational goals.",
+        ],
+      },
+     
     ],
   },
   {
